@@ -20,6 +20,7 @@ require(
         'customersApp/filters/nameProductFilter',
         'customersApp/controllers/navbarController',
         'customersApp/controllers/orders/orderChildController',
+        'kumonoteApp/controllers/historyController',
     ],
     function () {
         angular.bootstrap(document, ['customersApp']);

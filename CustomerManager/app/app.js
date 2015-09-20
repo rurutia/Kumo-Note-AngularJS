@@ -39,6 +39,16 @@ define(['customersApp/services/routeResolver'], function () {
                 .when('/orders', route.resolve('Orders', 'orders/', 'vm'))
                 .when('/about', route.resolve('About', '', 'vm'))
                 .when('/login/:redirect*?', route.resolve('Login', '', 'vm'))
+                .when('/history', {
+                	templateUrl: '/app/kumonoteApp/views/history.html',
+                	controller: 'historyCtrl',
+                	controllerAs: 'vm',
+                	resolve: {
+                		msg: function() {
+                			return "msg from route";
+                		}
+                	}
+                })
                 .otherwise({ redirectTo: '/customers' });
 
     }]);
